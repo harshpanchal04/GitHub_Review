@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# Automated Performance Review System for Engineers Using AI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project aims to build an automated performance review system for engineers using AI. By integrating with the GitHub API, the system collects, analyzes, and scores engineers' contributions based on quality, difficulty, impact, and consistency. The goal is to provide objective and actionable performance assessments.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+1. **Data Collection and Preprocessing**
+   - Retrieve commits, pull requests, issues, and code changes using the GitHub API.
+   - Store data in MongoDB with Mongoose schemas.
+   - Clean and preprocess data to remove noise.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. **Quality Assessment**
+   - Use ESLint and SonarQube for code quality analysis.
+   - Employ machine learning models for deeper code evaluation.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. **Difficulty Assessment**
+   - Estimate contribution difficulty using ML models.
+   - Consider code complexity, dependencies, and required domain knowledge.
 
-### `npm test`
+4. **Impact and Consistency Assessment**
+   - Analyze the impact on the project and business value.
+   - Evaluate commit frequency, work quality, and adherence to guidelines.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+5. **Scoring**
+   - Develop a formula to combine quality, difficulty, impact, and consistency scores.
 
-### `npm run build`
+6. **API Development**
+   - Create RESTful APIs with Node.js and Express.js for data retrieval and scoring.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+7. **User Interface**
+   - Build a React.js interface for accessing performance scores and detailed reports.
+   - Include visualizations to highlight strengths and improvement areas.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Technologies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Backend
+- **Language**: JavaScript/Node.js
+- **Framework**: Express.js/Nest.js
+- **Database**: MongoDB
+- **Code Quality**: ESLint, SonarQube
+- **Integration**: GitHub API (Octokit)
+- **Containerization**: Docker
+- **Orchestration**: Kubernetes
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Frontend
+- **Framework**: React.js
+- **State Management**: Redux/React Context API
 
 ### Deployment
+- **CI/CD**: GitHub Actions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Setup Instructions
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Prerequisites
+- Node.js
+- MongoDB
+- Docker (optional, for containerization)
+- GitHub account for API access
